@@ -6,13 +6,24 @@ The web application listens on 0.0.0.0, port 5000 and has the following route:
     /: display "Hello HBNB!"
 
 """
-# pip install flake8
 from flask import Flask
 app = Flask(__name__)
 
 
+@app.route('/airbnb-onepage/', strict_slashes=False)
+def airbnb_onepage():
+    """
+    Route handler for the root URL.
+
+    Returns:
+        str: A welcome message "Hello HBNB!".
+    """
+
+    return 'Hello HBNB!'
+
+
 @app.route('/', strict_slashes=False)
-def hello_hbnb():
+def index():
     """
     Route handler for the root URL.
 
