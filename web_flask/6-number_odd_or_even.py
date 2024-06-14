@@ -42,7 +42,7 @@ def c_route(text="is cool"):
     Returns:
         str: A welcome message "C".
     """
-
+    text = text.replace("_", " ")
     return f'C {text}'
 
 
