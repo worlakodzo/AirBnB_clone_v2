@@ -43,6 +43,7 @@ def c_route(text="is cool"):
         str: A welcome message "C".
     """
 
+    text = text.replace("_", " ")
     return f'C {text}'
 
 if __name__ == '__main__':
