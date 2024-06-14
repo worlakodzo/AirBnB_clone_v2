@@ -81,7 +81,7 @@ def number_template_route(n):
         Render a number".
     """
 
-    return render_template('number_odd_or_even.html', num_text=n)
+    return render_template('5-number.html', num_text=n)
 
 
 @app.route('/number_odd_or_even/<int:n>', strict_slashes=False)
