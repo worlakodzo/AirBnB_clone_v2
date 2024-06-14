@@ -96,6 +96,7 @@ def number_odd_or_even(n):
 
     odd_or_even = "even" if n % 2 == 0 else "odd"
     num_text = f"{n} is {odd_or_even}"
+    
     return render_template('6-number_odd_or_even.html', num_text=num_text)
 
 
