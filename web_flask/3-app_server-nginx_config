@@ -69,7 +69,7 @@ http {
         client_max_body_size 100m;
 
         location /airbnb-dynamic/number_odd_or_even/ {
-            proxy_pass http://127.0.0.1:5001/;
+            proxy_pass http://127.0.0.1:5001;
             proxy_set_header Host $host;
             proxy_set_header X-Real-IP $remote_addr;
             proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
@@ -78,16 +78,12 @@ http {
         }
 
         location /airbnb-onepage/ {
-            proxy_pass http://127.0.0.1:5000/;
+            proxy_pass http://127.0.0.1:5000;
             proxy_set_header Host $host;
             proxy_set_header X-Real-IP $remote_addr;
             proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
             proxy_set_header X-Forwarded-Proto $scheme;
             proxy_redirect off;
         }
-
-
-
-
     }
 }
