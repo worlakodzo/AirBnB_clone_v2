@@ -32,6 +32,11 @@ def states():
 
     return jsonify(data)
 
+@app.route("/api/v1/status", strict_slashes=False)
+def health():
+
+    return jsonify({"status": "OK"})
+
 
 @app.route("/", strict_slashes=False)
 def index():
